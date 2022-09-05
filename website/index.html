@@ -12,49 +12,53 @@
 
 </head>
 <body>
-    <nav class="navbar bg-light fixed-top">
-        <h1 >Welkom bij Blue10 Bistro</h1>
-           </nav>
+    <nav >
+        <h1 class="fw-bold">Welkom bij Blue10 Bistro</h1>
+    </nav>
     <main>
      
 
      <h2>Bestel hier</h2>
      <h3>Hoofdgerechten</h3>
-     <form submit="false">
-        <input type="radio" id="0" name="food" value="0">
-        <label for="0">Smoked Salmon: 6.25</label><br>
+     <form class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
         
-        <input type="radio" id="1" name="food" value="1">
-        <label for="1">Carrot Soup: 3.55</label><br>
-        
-        <input type="radio" id="2" name="food" value="2">
-        <label for="2">Chicken Balerno: 9.35</label><br>
-        
-        <input type="radio" id="3" name="food" value="3">
-        <label for="3">Roast Beef: 10.00</label><br>
-        
-        <input type="radio" id="4" name="food" value="4">
-        <label for="4">Pizza Americana: 10.20</label><br>
-        
-        <input type="radio" id="5" name="food" value="5">
-        <label for="5">Chocolate gateau: 4.00</label><br>
-        
-        <input type="radio" id="6" name="food" value="6">
-        <label for="6">Chocolate Cake: 4.25</label><br>
-        
-        <input type="radio" id="7" name="food" value="7">
-        <label for="7">Coffee and Mints: 2.50</label><br>
-        
-        <input type="radio" id="8" name="food" value="8">
-        <label for="8">Margarita lemon: 7.00</label><br>
-        
-        <input type="radio" id="9" name="food" value="9">
-        <label for="9">Cosmopolitan: 7.99</label><br>
-        
-        <input type="radio" id="10" name="food" value="10">
-        <label for="10">Moscow Mule: 3.99</label><br>
-        
-        <button class="btn btn-success" type="button"onclick="myFunction()">Bestellen</button>    
+       
+        <input type="radio" class="btn-check" name="food" id="0" value="0" autocomplete="off" checked>
+        <label class="btn btn-outline-primary" for="0">Smoked Salmon: €6.25</label>
+
+        <input type="radio" class="btn-check" name="food" id="1" value="1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="1">Carrot Soup: €3.55</label>
+
+        <input type="radio" class="btn-check" name="food" id="2" value="2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="2">Chicken Balerno: €9.35</label>
+
+        <input type="radio" class="btn-check" name="food" id="3" value="3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="3">Roast Beef: €10.00</label>
+
+        <input type="radio" class="btn-check" name="food" id="4" value="4" autocomplete="off">
+        <label class="btn btn-outline-primary" for="4">Pizza Americana: €10.20</label>
+
+        <input type="radio" class="btn-check" name="food" id="5" value="5" autocomplete="off">
+        <label class="btn btn-outline-primary" for="5">Chocolate gateau: €4.00</label>
+
+        <input type="radio" class="btn-check" name="food" id="6" value="6" autocomplete="off">
+        <label class="btn btn-outline-primary" for="6">Chocolate Cake: €4.50</label>
+
+        <input type="radio" class="btn-check" name="food" id="7" value="7" autocomplete="off">
+        <label class="btn btn-outline-primary" for="7">Coffee and Mints: €2.50</label>
+
+        <input type="radio" class="btn-check" name="food" id="8" value="8" autocomplete="off">
+        <label class="btn btn-outline-primary" for="8">Margarita lemon: €7.00</label>
+
+        <input type="radio" class="btn-check" name="food" id="9" value="9" autocomplete="off">
+        <label class="btn btn-outline-primary" for="9">Cosmopolitan: €7.99</label>
+
+        <input type="radio" class="btn-check" name="food" id="10" value="10" autocomplete="off">
+        <label class="btn btn-outline-primary" for="10">Moscow Mule: €3.99</label>
+
+    
+
+        <button id="btn.1" class="btn btn-success" type="button"onclick="myFunction()">Bestellen</button>    
      </form>  
     </main>
 
@@ -65,10 +69,11 @@
 
         </div>
 
-        <input type="submit" class="btn btn-success" value="Afrekenen" onclick="printTotalPrice()">
+        
     </div>
     
     <div class="totaalbedrag">
+        <input id="btn.2" type="submit" style="display:none" class="btn btn-success" value="Afrekenen" onclick="printTotalPrice() ">
         <h2>Totaalbedrag</h2>
         <div id="totalPrice">
 

@@ -1,5 +1,12 @@
 nav{
-    margin-bottom: 100px;
+    
+    color: rgb(1, 207, 70);
+    top: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100vw;
+    z-index: 10;
+    
 }
 
 main{
@@ -10,8 +17,18 @@ main{
 
 .bestelling{
     text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .totaalbedrag{
     text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+body{
+    background-color: rgb(250, 250, 250) ;
 }
