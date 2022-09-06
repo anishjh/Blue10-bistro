@@ -13,18 +13,20 @@ let menu = [
     {"id":11,"Dish":"Pannenkoeken","Price":2.69}
 ]  
 
+
+for (var dish of menu) 
+{
+  var text = dish.Dish + " " + dish.Price;
+  document.getElementById('output').innerHTML += "<input type='radio' value='"+dish.id+"' class='btn-check' name='food'id='" +dish.id+ "' >"
+  document.getElementById('output').innerHTML += '<label class="btn btn-outline-primary" for="'+dish.id+'">'+text+'</label>'
+}
+document.getElementById('output').innerHTML += '<button id="btn.1" class="btn btn-success" type="button"onclick="myFunction()">Bestellen</button>'
+
+
 var totalPrice = parseFloat(0);
 
 
-menu.forEach(menuItem => {
-    console.log("Ik heb een ding gedaan")
-    var paragraph = document.createElement("p");
-    var text = document.createTextNode(menuItem.Dish);
-    paragraph.appendChild(text); // Zet de text in de paragraph
-    var element = document.getElementById("bestelling")//Pak de target div
-    element.appendChild(paragraph); //
-});
-var paragraaf;
+
 
 function doEenDing() {
     console.log("Ik heb een ding gedaan")
@@ -39,7 +41,7 @@ function doEenDing() {
 function myFunction(){
 var dish = document.getElementsByName('food')
 
-var choice = parseFloat(document.querySelector('input[name="food"]:checked').value);
+var choice = parseFloat(document.querySelector('input[name="food"]:checked').id);
 var text = menu[choice].Dish + " - €" + menu[choice].Price;
 totalPrice = totalPrice + menu[choice].Price;
 var paragraph = document.createElement("p");
@@ -52,7 +54,7 @@ var paragraph = document.createElement("p");
 
 function printTotalPrice(){
     var paragraph = document.createElement("h2");
-    var text = document.createTextNode("€"+totalPrice);
+    var text = document.createTextNode("€"+(Math.round(totalPrice * 100) / 100 ));
     paragraph.appendChild(text);
     var element = document.getElementById("totalPrice")
     element.appendChild(paragraph);
