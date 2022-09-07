@@ -10,12 +10,9 @@ let menu = [
     {"id":8,"Dish":"Margarita lemon","Price":7},
     {"id":9,"Dish":"Cosmopolitan","Price":7.99},
     {"id":10,"Dish":"Moscow Mule","Price":3.99},
-    {"id":11,"Dish":"Pannenkoeken","Price":2.69}
-]  
-
-
-       
-
+    {"id":11,"Dish":"Pannenkoeken","Price":2.69},
+    {"id":12,"Dish":"Patatje Speciaal","Price":3.69}
+            ]  
 
 for (var dish of menu) 
 {
