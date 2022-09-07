@@ -60,6 +60,5 @@ function printTotalPrice(){
     element.appendChild(paragraph);
     document.getElementById("btn.2").style.display = "none";
     document.getElementById("btn.1").style.display = "none";
-
 }
 
