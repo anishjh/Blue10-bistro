@@ -14,6 +14,7 @@ let menu = [
     {"id":12,"Dish":"Patatje Speciaal","Price":3.69}
             ]  
 
+
 for (var dish of menu) 
 {
   var text = dish.Dish + " " + dish.Price;
