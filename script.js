@@ -14,6 +14,11 @@ let menu = [
     {"id":12,"Dish":"Patatje Speciaal","Price":3.69}
             ]  
 
+fetch("https://mocki.io/v1/eb9ed156-7851-415b-a2d9-5dfb254d6ba6")
+.then(res => console.log(res))
+
+
+
 for (var dish of menu) 
 {
   var text = dish.Dish + " " + dish.Price;
