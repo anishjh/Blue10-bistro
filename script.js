@@ -25,16 +25,6 @@ function printMenu(file){
 }
 
 
-function doEenDing() {
-    console.log("Ik heb een ding gedaan")
-    var paragraph = document.createElement("p");
-    var text = document.createTextNode("En hier laat ik wat achter");
-    paragraph.appendChild(text); // Zet de text in de paragraph
-    var element = document.getElementById("bestelling")//Pak de target div
-    element.appendChild(paragraph); // Voeg nieuwe paragraaf aan target div
-    
-}
-
 function myFunction(){
 var dish = document.getElementsByName('food')
 
