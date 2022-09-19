@@ -1,32 +1,28 @@
-let menu = [
-    {"id":0,"Dish":"Smoked Salmon","Price":6.25},
-    {"id":1,"Dish":"Carrot Soup","Price":3.55},
-    {"id":2,"Dish":"Chicken Balerno","Price":9.35},
-    {"id":3,"Dish":"Roast Beef","Price":10.00},
-    {"id":4,"Dish":"Pizza Americana","Price":10.20},
-    {"id":5,"Dish":"Chocolate gateau","Price":4.00},
-    {"id":6,"Dish":"Chocolate Cake","Price":4.50},
-    {"id":7,"Dish":"Coffee and Mints","Price":2.50},
-    {"id":8,"Dish":"Margarita lemon","Price":7},
-    {"id":9,"Dish":"Cosmopolitan","Price":7.99},
-    {"id":10,"Dish":"Moscow Mule","Price":3.99},
-    {"id":11,"Dish":"Pannenkoeken","Price":2.69},
-    {"id":12,"Dish":"Patatje Speciaal","Price":3.69}
-            ]  
-
-
-for (var dish of menu) 
-{
-  var text = dish.Dish + " " + dish.Price;
-  document.getElementById('output').innerHTML += "<input type='radio' value='"+dish.id+"' class='btn-check' name='food'id='" +dish.id+ "' >"
-  document.getElementById('output').innerHTML += '<label class="btn btn-outline-primary" for="'+dish.id+'">'+text+'</label>'
-}
-document.getElementById('output').innerHTML += '<button id="btn.1" class="btn btn-success" type="button"onclick="myFunction()">Bestellen</button>'
+let menu; 
 
 
 var totalPrice = parseFloat(0);
 
+function getJSON(){
+    fetch('https://b10bc-weu-httptriggersophie-fa.azurewebsites.net/api/HelloWorld', {method: "GET"})
+        .then((response)=> response.json())
+        .then((data)=>{
+            menu=data;
+            console.log(menu);
+            printMenu(menu);
+            }
+             )
+        .catch((error)=>{console.log(error)});   
+}
 
+function printMenu(file){
+    file.forEach(dish =>{
+        var text = dish.Dish + " " + dish.Price;
+        document.getElementById('output').innerHTML += "<input type='radio' value='"+dish.id+"' class='btn-check' name='food'id='" +dish.id+ "' >"
+        document.getElementById('output').innerHTML += '<label class="btn btn-outline-primary" for="'+dish.id+'">'+text+'</label>'
+    }) 
+    document.getElementById('output').innerHTML += '<button id="btn.1" class="btn btn-success" type="button"onclick="myFunction()">Bestellen</button>' 
+}
 
 
 function doEenDing() {
