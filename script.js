@@ -1,14 +1,14 @@
-let menu; 
+var menu; 
 
 
 var totalPrice = parseFloat(0);
 
 function getJSON(){
-    fetch('https://b10bc-weu-httptriggersophie-fa.azurewebsites.net/api/HelloWorld', {method: "GET"})
+    fetch('https://b10bc-weu-httptriggeranish-fa.azurewebsites.net/api/HelloWorld', {method: "GET"})
         .then((response)=> response.json())
         .then((data)=>{
             menu=data;
-            console.log(menu);
+            console.log(data);
             printMenu(menu);
             }
              )
