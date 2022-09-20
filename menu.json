@@ -10,5 +10,7 @@
     {"id":8,"Dish":"Margarita lemon","Price":7},
     {"id":9,"Dish":"Cosmopolitan","Price":7.99},
     {"id":10,"Dish":"Moscow Mule","Price":3.99},
-    {"id":11,"Dish":"Stampot","Price":1.99}
+    {"id":11,"Dish":"Stampot","Price":1.99},
+    {"id":12,"Dish":"pot","Price":1.99}
+
 ]
