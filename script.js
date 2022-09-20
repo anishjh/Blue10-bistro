@@ -51,3 +51,15 @@ function printTotalPrice(){
 
 }
 
+function postData(){
+    fetch('https://b10bc-weu-httptriggeranish-fa.azurewebsites.net/api/HelloWorld', {method: "POST", body: totalPrice})
+    .then((response)=> response.json())
+    .then((data)=>{
+        menu=data;
+        console.log(data);
+        printMenu(menu);
+        }
+         )
+    .catch((error)=>{console.log(error)}); 
+}
+
