@@ -54,7 +54,7 @@ function printTotalPrice(){
 
 function  postData(){
 
-    let response =  fetch("http://localhost:7061/api/TableFunction", {
+    fetch("https://b10bc-weu-httptriggeranish-fa.azurewebsites.net/api/TableFunction", {
 method: 'POST',
 headers: {
   'Accept': 'application/json',
