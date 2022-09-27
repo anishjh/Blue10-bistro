@@ -1,8 +1,8 @@
 let menu; 
-
+let  ordedDishes = new Array();
 
 let totalPrice = parseFloat(0);
-
+let orders;
 function getJSON(){
     fetch('https://b10bc-weu-httptriggeranish-fa.azurewebsites.net/api/HelloWorld', {method: "GET"})
         .then((response)=> response.json())
@@ -29,7 +29,9 @@ function myFunction(){
 let dish = document.getElementsByName('food');
 
 let choice = parseFloat(document.querySelector('input[name="food"]:checked').id);
-let text = menu[choice].Dish + " - €" + menu[choice].Price;
+let text = menu[choice].Dish + " - " + menu[choice].Price;
+ordedDishes.push(menu[choice].Dish)
+console.log(ordedDishes)
 totalPrice = totalPrice + menu[choice].Price;
 let paragraph = document.createElement("p");
      let text1 = document.createTextNode(text);
@@ -48,8 +50,9 @@ function printTotalPrice(){
     document.getElementById("btn.2").style.display = "none";
     document.getElementById("btn.1").style.display = "none";
     document.getElementById("totaalBedrag").style.display = "inline-block";
-    postData();
-
+     orders = ordedDishes.toString()
+     postData();
+    console.log(orders)
 }
 
 function  postData(){
@@ -61,8 +64,8 @@ headers: {
   'Content-Type': 'application/json'
 },
 body: `{
-   "TotalPrice": ${totalPrice}
-
+   "TotalPrice": ${totalPrice},
+   "Dishes": "${orders}"
   }`,
 });
 
